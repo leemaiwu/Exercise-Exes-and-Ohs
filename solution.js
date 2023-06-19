@@ -20,3 +20,14 @@ function XO(str) {
 console.log(XO("ooxx")) // true
 console.log(XO("xooxx")) // false
 console.log(XO("ooxXm")) // true
+
+// Alternate Solution
+
+function XOS(str) {
+    let strArr = str.toLowerCase().split('')
+    return (strArr.filter(x => x === 'x').length) === (strArr.filter(x => x === 'o').length)
+}
+
+console.log(XOS("ooxx")) // true
+console.log(XOS("xooxx")) // false
+console.log(XOS("ooxXm")) // true
